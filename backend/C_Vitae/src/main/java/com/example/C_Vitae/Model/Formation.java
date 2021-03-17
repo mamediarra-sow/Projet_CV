@@ -15,7 +15,7 @@ public class Formation {
             strategy = GenerationType.SEQUENCE,
             generator = "formation_sequence"
     )
-    private int id;
+    private Integer id;
 
     private String date;
 
@@ -28,8 +28,10 @@ public class Formation {
     /////////////////////////Constructeur//////////////////////////////
 
 
-    public Formation(int id, String date, String description) {
-        this.id = id;
+    public Formation() {
+    }
+
+    public Formation(String date, String description) {
         this.date = date;
         this.description = description;
     }
@@ -44,11 +46,11 @@ public class Formation {
         this.personne = personne;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

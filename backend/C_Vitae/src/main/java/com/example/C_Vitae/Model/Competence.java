@@ -15,7 +15,7 @@ public class Competence {
             strategy = GenerationType.SEQUENCE,
             generator = "competence_sequence"
     )
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "personne_id",nullable = false)
@@ -26,7 +26,10 @@ public class Competence {
     private String libelle;
     ///////////////// Constructeur///////////////////
 
-    public Competence(int id,String domaine, String libelle) {
+    public Competence() {
+    }
+
+    public Competence(Integer id, String domaine, String libelle) {
         this.id = id;
         this.domaine = domaine;
         this.libelle = libelle;
@@ -34,11 +37,11 @@ public class Competence {
     ///////////////Getter et Setter////////////////////
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

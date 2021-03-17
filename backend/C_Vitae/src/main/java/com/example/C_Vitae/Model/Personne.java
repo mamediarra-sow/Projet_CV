@@ -1,6 +1,7 @@
 package com.example.C_Vitae.Model;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 @Entity
 @Table(name = "PERSONNE")
@@ -15,7 +16,7 @@ public class Personne {
             strategy = GenerationType.SEQUENCE,
             generator = "personne_sequence"
     )
-    private int id;
+    private Integer id;
 
     @OneToMany(mappedBy = "personne")
     private List<Formation> formations;
@@ -48,9 +49,11 @@ public class Personne {
     /////////////////////// Constructeur///////////////////////////////
 
 
-    public Personne(int id, String nom, String prenom, String date_naissance, String adresse, String email,
+    public Personne() {
+    }
+
+    public Personne(String nom, String prenom, String date_naissance, String adresse, String email,
                     String situation_matrimoniale, List<String> langues, List<String> loisirs, List<String> vie_assoc) {
-        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.date_naissance = date_naissance;
@@ -64,7 +67,7 @@ public class Personne {
     ///////////////////////Getter et Setter/////////////////////////////////
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

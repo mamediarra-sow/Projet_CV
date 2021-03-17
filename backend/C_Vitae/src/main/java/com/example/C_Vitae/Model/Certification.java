@@ -15,7 +15,7 @@ public class Certification {
             strategy = GenerationType.SEQUENCE,
             generator = "certification_sequence"
     )
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "personne_id",nullable = false)
@@ -24,12 +24,23 @@ public class Certification {
     private String lien_certificat;
     /////////////////Constructeur//////////////////
 
-    public Certification(int id, String date, String lien_certificat) {
+    public Certification() {
+    }
+
+    public Certification(Integer id, String date, String lien_certificat) {
         this.id = id;
         this.date = date;
         this.lien_certificat = lien_certificat;
     }
     ///////////////////Getter et Setter//////////////
+
+    public Personne getPersonne() {
+        return personne;
+    }
+
+    public void setPersonne(Personne personne) {
+        this.personne = personne;
+    }
 
     public String getDate() {
         return date;
@@ -46,8 +57,12 @@ public class Certification {
     public void setLien_certificat(String lien_certificat) {
         this.lien_certificat = lien_certificat;
     }
-    /////////////////
-    public String toString(){
-        return ("Cette certification a été obtenue le "+this.date+" vous pouvez trouver le justificatif en cliquant  "+this.lien_certificat);
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
