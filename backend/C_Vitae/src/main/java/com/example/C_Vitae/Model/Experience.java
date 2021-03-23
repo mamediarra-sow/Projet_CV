@@ -31,8 +31,7 @@ public class Experience {
     public Experience() {
     }
 
-    public Experience(Integer id, String date, String description, List<String> technologies) {
-        this.id = id;
+    public Experience(String date, String description, List<String> technologies) {
         this.date = date;
         this.description = description;
         this.technologies = technologies;

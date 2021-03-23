@@ -10,13 +10,19 @@ import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Repository
+@Transactional
 public interface DAO_Personne  extends JpaRepository<Personne,Integer> {
     @Query("SELECT p FROM Personne p WHERE p.email=?1")
     Optional<Personne> findPersonneByEmail(String email);
+
     @Modifying
     @Query("UPDATE Personne p " +
             "SET p.enabled = TRUE " +
             "WHERE p.email= ?1")
-    public int EnablePersonne(String email);
+    int EnablePersonne(String email);
+
+    Personne findByUsername(String username);
+
+    Personne findByemail(String email);
 }
 

@@ -5,7 +5,6 @@ import com.example.C_Vitae.Model.Personne;
 import com.example.C_Vitae.Registration.Token.ConfirmationToken;
 import com.example.C_Vitae.Registration.Token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -87,4 +86,8 @@ public class PerService implements UserDetailsService {
     public void enablePersonne(String email) {
         DAO.EnablePersonne(email);
     }
+    public Personne findByUsername(String username){
+        return DAO.findByUsername(username);
+    }
+    public Personne findByemail(String email){return DAO.findByemail(email);}
 }

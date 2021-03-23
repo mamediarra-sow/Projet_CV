@@ -27,8 +27,7 @@ public class Certification {
     public Certification() {
     }
 
-    public Certification(Integer id, String date, String lien_certificat) {
-        this.id = id;
+    public Certification(String date, String lien_certificat) {
         this.date = date;
         this.lien_certificat = lien_certificat;
     }

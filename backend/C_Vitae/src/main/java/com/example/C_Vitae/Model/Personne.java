@@ -91,38 +91,6 @@ public class Personne implements UserDetails {
         this.password = password;
     }
 
-    public List<Formation> getFormations() {
-        return formations;
-    }
-
-    public void setFormations(List<Formation> formations) {
-        this.formations = formations;
-    }
-
-    public List<Experience> getExperiences() {
-        return experiences;
-    }
-
-    public void setExperiences(List<Experience> experiences) {
-        this.experiences = experiences;
-    }
-
-    public List<Certification> getCertifications() {
-        return certifications;
-    }
-
-    public void setCertifications(List<Certification> certifications) {
-        this.certifications = certifications;
-    }
-
-    public List<Competence> getCompetences() {
-        return competences;
-    }
-
-    public void setCompetences(List<Competence> competences) {
-        this.competences = competences;
-    }
-
     public AppUserRole getRole() {
         return role;
     }

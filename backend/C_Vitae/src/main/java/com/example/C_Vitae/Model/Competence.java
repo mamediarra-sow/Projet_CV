@@ -29,8 +29,7 @@ public class Competence {
     public Competence() {
     }
 
-    public Competence(Integer id, String domaine, String libelle) {
-        this.id = id;
+    public Competence(String domaine, String libelle) {
         this.domaine = domaine;
         this.libelle = libelle;
     }
